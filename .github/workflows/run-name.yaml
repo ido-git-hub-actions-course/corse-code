@@ -1,0 +1,12 @@
+name: Run name title change
+on:
+  push:
+    branches:
+      - main
+run-name: "Expressions & Contexts by @${{ github.actor }}, event: ${{ github.event_name }}"
+jobs:
+  run-name:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Hello, world!"
