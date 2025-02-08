@@ -3,10 +3,11 @@ on: [push]
 
 jobs:
   node-matrix:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [14, 15, 16]
+        nodes-os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.nodes-os }}
     steps:
       - run: node -v
       - name: setup node
