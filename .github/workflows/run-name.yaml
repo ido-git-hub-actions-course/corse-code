@@ -10,3 +10,9 @@ jobs:
     steps:
       - run: |
           echo "Hello, world!"
+      - run: |
+          echo '${{ toJson(github)}}'
+          echo '${{ toJson(job)}}'
+          echo '${{ toJson(steps)}}'
+          echo '${{ toJson(runner)}}'
+          echo '${{ toJson(secrets)}}'
