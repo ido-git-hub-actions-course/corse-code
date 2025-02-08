@@ -11,7 +11,7 @@ jobs:
         exclude:
           # excludes node 14, 15 on macOS
           - os: macos-latest
-            node-version: [14, 15]
+            node-version: "toJson('[14, 15]')"
 
     runs-on: ${{ matrix.os }}
     steps:
