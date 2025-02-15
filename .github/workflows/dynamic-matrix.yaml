@@ -24,3 +24,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: node -v
+
+  test-job:
+    runs-on: ${{ inputs.os }}
+    steps:
+      - run: echo "Running tests on ${{ inputs.os }}"
+      - run: echo "Tests completed successfully"
